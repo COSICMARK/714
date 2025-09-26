@@ -75,19 +75,7 @@ export default function HomePage() {
     );
   }, []);
 
-  // simple parallax
-  useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return;
-    const onMove = (e: MouseEvent) => {
-      const x = (e.clientX / window.innerWidth - 0.5) * 12;
-      const y = (e.clientY / window.innerHeight - 0.5) * -8;
-      el.style.transform = `perspective(900px) rotateY(${x}deg) rotateX(${y}deg) translateZ(0)`;
-    };
-    window.addEventListener("mousemove", onMove);
-    return () => window.removeEventListener("mousemove", onMove);
-  }, []);
-
+  
   const playSound = (name: "chime" | "whoosh" | "bg") => {
     const s = sounds[name];
     if (!s) return;
@@ -213,7 +201,7 @@ export default function HomePage() {
           className="absolute text-3xl"
           style={{ top: pos.top, left: pos.left }}
         >
-          {["😼", "💙", "✨", "🌐", "🎶", "🐾", "⚡"][i % 7]}
+          {["🌐", "💙", "✨", "🟦", "🔵", "🐾", "⚡"][i % 7]}
         </motion.div>
       ))}
 

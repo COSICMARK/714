@@ -4,7 +4,15 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        caveat: ["Caveat", "cursive"],
+        indie: ["Indie Flower", "cursive"],
+        patrick: ["Patrick Hand", "cursive"],
+        gloria: ["Gloria Hallelujah", "cursive"],
+        shadows: ["Shadows Into Light", "cursive"],
+      },
+    },
   },
   plugins: [
     require('@tailwindcss/forms'),
