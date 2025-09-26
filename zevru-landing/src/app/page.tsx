@@ -280,8 +280,8 @@ export default function HomePage() {
             🎵
           </div>
           <div>
-            <div className="font-bold text-[13px]">Cinematic loop</div>
-            <div className="text-xs text-white/80">Chime & whoosh SFX ready</div>
+            <div className="font-bold text-[13px]"></div>
+            <div className="text-xs text-white/80">Ready to moon?</div>
           </div>
         </div>
       </motion.div>
