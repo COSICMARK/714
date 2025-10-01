@@ -34,7 +34,7 @@ export default function Tokenomics() {
       </p>
 
       <p className="text-xl font-caveat text-gray-800">
-        Balance is key – the community holds most of it,  
+        Balance is key, the community holds most of it,  
         the team just a little, and liquidity is locked tight  
         so trading stays chill.  
         Fair, fun, and fueled by the people who believe in it.
