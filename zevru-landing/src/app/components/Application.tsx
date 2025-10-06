@@ -60,32 +60,43 @@ export default function Application() {
   };
 
   // Submit form → Supabase
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
 
-    const payload = {
-      fullname: form.fullname,
-      twitter: form.twitter,
-      discord_username: form.discord,
-      erc20: form.erc20,
-      inviter_code: form.inviterCode,
-      bullish_reason: form.bullishReason,
-      whitelist_choice: form.whitelistChoice,
-      invite_code: form.twitter, // invite_code is Twitter handle
-    };
-
-    const { error, data } = await supabase
-      .from("applications")
-      .insert([payload])
-      .select("*")
-      .single();
-
-    if (error) {
-      alert("❌ Error: " + error.message);
-    } else {
-      setUserData(data);
-    }
+  const payload = {
+    fullname: form.fullname,
+    twitter: form.twitter,
+    discord_username: form.discord,
+    erc20: form.erc20,
+    inviter_code: form.inviterCode,
+    bullish_reason: form.bullishReason,
+    whitelist_choice: form.whitelistChoice,
+    invite_code: form.twitter, // invite_code is Twitter handle
   };
+
+  const { error, data } = await supabase
+    .from("applications")
+    .insert([payload])
+    .select("*")
+    .single();
+
+  if (error) {
+    // ✅ Custom error handling for duplicate users
+    if (
+      error.message.includes("duplicate key") ||
+      error.message.includes("violates unique constraint")
+    ) {
+      alert("⚠️ User already exists. Please use the lookup option to access your referral page.");
+    } else {
+      alert("❌ Error: " + error.message);
+    }
+    return;
+  }
+
+  // ✅ Success — user inserted
+  setUserData(data);
+};
+
 
   // Lookup existing ref code by wallet/username → take user to referral page
   const handleLookup = async () => {
@@ -354,39 +365,48 @@ export default function Application() {
           </select>
         </div>
 
-        {/* Social Tasks */}
-        <div className="space-y-3">
-          <p className="font-bold text-blue-700">✅ Complete the social tasks:</p>
-          <div className="flex flex-wrap gap-3">
-            <button
-              type="button"
-              onClick={() => setTasks({ ...tasks, twitter: true })}
-              className={`px-4 py-2 rounded-md shadow font-bold ${
-                tasks.twitter ? "bg-green-500 text-white" : "bg-blue-600 text-white"
-              }`}
-            >
-              {tasks.twitter ? "✔ Followed Twitter" : "Follow Twitter"}
-            </button>
-            <button
-              type="button"
-              onClick={() => setTasks({ ...tasks, discord: true })}
-              className={`px-4 py-2 rounded-md shadow font-bold ${
-                tasks.discord ? "bg-green-500 text-white" : "bg-indigo-600 text-white"
-              }`}
-            >
-              {tasks.discord ? "✔ Joined Discord" : "Join Discord"}
-            </button>
-            <button
-              type="button"
-              onClick={() => setTasks({ ...tasks, retweet: true })}
-              className={`px-4 py-2 rounded-md shadow font-bold ${
-                tasks.retweet ? "bg-green-500 text-white" : "bg-yellow-600 text-white"
-              }`}
-            >
-              {tasks.retweet ? "✔ Retweeted" : "Retweet"}
-            </button>
-          </div>
-        </div>
+    {/* ✅ Social Tasks */}
+<div className="flex flex-wrap gap-3">
+  {/* Twitter */}
+  <a
+    href="https://twitter.com/zevrucoin" // 🔹 replace with your actual Twitter handle if needed
+    target="_blank"
+    rel="noopener noreferrer"
+    onClick={() => setTasks({ ...tasks, twitter: true })}
+    className={`px-4 py-2 rounded-md shadow font-bold inline-block ${
+      tasks.twitter ? "bg-green-500 text-white" : "bg-blue-600 text-white"
+    }`}
+  >
+    {tasks.twitter ? "✔ Followed Twitter" : "Follow Twitter"}
+  </a>
+
+  {/* Discord */}
+  <a
+    href="https://discord.gg/zevru" // 🔹 replace with your actual Discord invite link
+    target="_blank"
+    rel="noopener noreferrer"
+    onClick={() => setTasks({ ...tasks, discord: true })}
+    className={`px-4 py-2 rounded-md shadow font-bold inline-block ${
+      tasks.discord ? "bg-green-500 text-white" : "bg-indigo-600 text-white"
+    }`}
+  >
+    {tasks.discord ? "✔ Joined Discord" : "Join Discord"}
+  </a>
+
+  {/* Retweet */}
+  <a
+    href="https://twitter.com/zevru/status/1234567890" // 🔹 replace with your real tweet link
+    target="_blank"
+    rel="noopener noreferrer"
+    onClick={() => setTasks({ ...tasks, retweet: true })}
+    className={`px-4 py-2 rounded-md shadow font-bold inline-block ${
+      tasks.retweet ? "bg-green-500 text-white" : "bg-yellow-600 text-white"
+    }`}
+  >
+    {tasks.retweet ? "✔ Retweeted" : "Retweet"}
+  </a>
+</div>
+
 
         {/* Submit */}
         <button
