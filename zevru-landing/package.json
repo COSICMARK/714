@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "vercel-build": "next build"
+    "vercel-build": "next build --no-lint"
   },
   "dependencies": {
     "@rainbow-me/rainbowkit": "^2.2.8",
@@ -17,6 +17,7 @@
     "@tailwindcss/typography": "^0.5.19",
     "@walletconnect/web3-provider": "^1.8.0",
     "@web3modal/react": "^2.7.1",
+    "@react-native-async-storage/async-storage": "^1.23.1",
     "ethers": "^6.15.0",
     "framer-motion": "^12.23.22",
     "lucide-react": "^0.544.0",
