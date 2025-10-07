@@ -75,7 +75,7 @@ export default function Leaderboard({
   if (loading) return <div className="text-blue-700">Loading leaderboard…</div>;
 
   const listToShow =
-    searchResults !== null ? searchResults : data.slice(0, 3);
+    searchResults !== null ? searchResults : data.slice(0, 5);
 
   const rankBadge = (rank: number) => {
     if (rank === 1) return "🥇";
