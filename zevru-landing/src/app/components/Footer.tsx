@@ -1,56 +1,49 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { FaTwitter, FaDiscord } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full py-4 px-6 flex flex-col sm:flex-row items-center justify-between border-t border-blue-400/30 text-blue-100 bg-black/30 backdrop-blur-md font-[Patrick_Hand]">
-      {/* Logo */}
-      <div className="flex items-center gap-2">
-        <Image
-          src="https://i.postimg.cc/8c3bpbwD/main-zevru-logo.png"
-          alt="Zevru Logo"
-          width={38}
-          height={38}
-          className="drop-shadow-[0_0_10px_rgba(59,130,246,0.6)]"
-        />
-        <span className="font-bold text-blue-300 text-lg tracking-wide">
-          ZEVRU
-        </span>
-      </div>
-
+    <footer className="relative w-full py-4 px-6 flex flex-col sm:flex-row items-center justify-between border-t border-blue-400/30 text-blue-100 bg-black/30 backdrop-blur-md font-[Patrick_Hand] mt-auto">
+      
       {/* Social Links */}
-      <div className="flex items-center gap-6 text-sm sm:text-base mt-3 sm:mt-0">
+      <div className="flex items-center gap-6 text-sm sm:text-base mt-2 sm:mt-0">
         <Link
           href="https://x.com/Zevrucoin"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-blue-400 transition-colors"
+          className="flex items-center gap-2 hover:text-sky-400 transition-colors"
         >
-          Twitter
+          <FaTwitter size={18} /> Twitter
         </Link>
 
         <Link
-          href="#"
-          className="text-blue-300/60 cursor-not-allowed"
-          title="Discord link coming soon"
+          href="https://discord.gg/your-link-here"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 hover:text-indigo-400 transition-colors"
         >
-          Discord
+          <FaDiscord size={18} /> Discord
         </Link>
       </div>
 
-      {/* Disclaimer */}
+      {/* Centered Warning */}
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="text-[12px] sm:text-sm text-blue-200/80 mt-3 sm:mt-0 max-w-md text-center sm:text-right leading-snug italic drop-shadow-[0_0_10px_rgba(59,130,246,0.3)]"
+        className="text-[12px] sm:text-sm text-red-400 font-semibold text-center max-w-md leading-snug italic mt-3 sm:mt-0"
       >
-        ⚠️ We will never ask you to connect your wallet or sign any transaction here.
+        ⚠️ We will never ask you to connect your wallet or sign any transaction here.  
         Airdrops are only claimable via a trusted third-party site on TGE.
       </motion.p>
+
+      {/* Rights Reserved */}
+      <div className="text-[12px] sm:text-sm text-blue-200/70 mt-3 sm:mt-0">
+        © {new Date().getFullYear()} Zevru. All rights reserved.
+      </div>
 
       {/* Glow Accent */}
       <div
