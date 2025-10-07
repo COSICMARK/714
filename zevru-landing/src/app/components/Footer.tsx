@@ -6,55 +6,58 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full mt-20 py-10 px-6 flex flex-col items-center justify-center border-t border-blue-500/20 text-blue-100 bg-black/20 backdrop-blur-md">
+    <footer className="relative w-full py-4 px-6 flex flex-col sm:flex-row items-center justify-between border-t border-blue-400/30 text-blue-100 bg-black/30 backdrop-blur-md font-[Patrick_Hand]">
       {/* Logo */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="flex flex-col items-center gap-4 text-center"
-      >
+      <div className="flex items-center gap-2">
         <Image
           src="https://i.postimg.cc/8c3bpbwD/main-zevru-logo.png"
           alt="Zevru Logo"
-          width={120}
-          height={120}
-          className="drop-shadow-[0_0_20px_rgba(59,130,246,0.5)]"
+          width={38}
+          height={38}
+          className="drop-shadow-[0_0_10px_rgba(59,130,246,0.6)]"
         />
+        <span className="font-bold text-blue-300 text-lg tracking-wide">
+          ZEVRU
+        </span>
+      </div>
 
-        {/* Socials */}
-        <div className="flex gap-6 mt-3">
-          <Link
-            href="https://x.com/Zevrucoin"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-400 transition-colors"
-          >
-            Twitter
-          </Link>
+      {/* Social Links */}
+      <div className="flex items-center gap-6 text-sm sm:text-base mt-3 sm:mt-0">
+        <Link
+          href="https://x.com/Zevrucoin"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-blue-400 transition-colors"
+        >
+          Twitter
+        </Link>
 
-          <Link
-            href="#"
-            className="text-blue-300/60 cursor-not-allowed"
-            title="Discord link coming soon"
-          >
-            Discord
-          </Link>
-        </div>
+        <Link
+          href="#"
+          className="text-blue-300/60 cursor-not-allowed"
+          title="Discord link coming soon"
+        >
+          Discord
+        </Link>
+      </div>
 
-        {/* Disclaimer */}
-        <p className="max-w-2xl text-sm mt-6 text-blue-200/80 leading-relaxed">
-          ⚠️ WARNING: We will never ask you to connect your wallet or sign any transaction here.
-          All airdrops will only be claimable via a trusted third-party site on TGE.
-        </p>
-      </motion.div>
+      {/* Disclaimer */}
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        className="text-[12px] sm:text-sm text-blue-200/80 mt-3 sm:mt-0 max-w-md text-center sm:text-right leading-snug italic drop-shadow-[0_0_10px_rgba(59,130,246,0.3)]"
+      >
+        ⚠️ We will never ask you to connect your wallet or sign any transaction here.
+        Airdrops are only claimable via a trusted third-party site on TGE.
+      </motion.p>
 
-      {/* Glow underline */}
+      {/* Glow Accent */}
       <div
-        className="absolute bottom-0 w-full h-[80px] blur-3xl -z-10"
+        className="absolute bottom-0 w-full h-[35px] blur-2xl -z-10"
         style={{
           background:
-            "radial-gradient(circle at bottom center, rgba(59,130,246,0.4), transparent 70%)",
+            "radial-gradient(circle at bottom center, rgba(59,130,246,0.35), transparent 70%)",
         }}
       />
     </footer>
