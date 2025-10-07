@@ -256,7 +256,8 @@ const handleSubmit = async (e: React.FormEvent) => {
       </div>
 
       {/* Application Form */}
-      <form onSubmit={handleSubmit} className="space-y-5 font-serif text-blue-900">
+       <form onSubmit={handleSubmit} className="space-y-5 font-sans font-normal text-blue-900">
+
         {/* Full Name */}
         <div>
           <label className="block text-sm mb-1 font-bold text-blue-700">
