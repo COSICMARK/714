@@ -44,8 +44,8 @@ export default function Panel({ onClose, backgroundUrl }: PanelProps) {
             key={tab}
             className={`relative pb-2 transition-all ${
               activeTab === tab
-                ? "font-extrabold text-blue-700"
-                : "font-medium text-blue-400"
+                ? "font-outfit text-blue-700"
+                : "font-outfit text-blue-400"
             }`}
             onClick={() => setActiveTab(tab as "tokenomics" | "application")}
           >

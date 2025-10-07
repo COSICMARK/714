@@ -5,12 +5,12 @@ import "./globals.css";
 import { Providers } from "@/app/providers/wagmiClient";
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
+  variable: "--font-outfit",
   subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+  variable: "--font-outfit",
   subsets: ["latin"],
 });
 

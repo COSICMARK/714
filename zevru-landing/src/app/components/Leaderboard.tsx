@@ -86,7 +86,7 @@ export default function Leaderboard({
 
   return (
     <div className="w-full bg-white border border-blue-100 rounded-2xl p-6 shadow-lg">
-      <h3 className="text-2xl font-extrabold text-blue-800 mb-6 flex items-center gap-2">
+      <h3 className="text-2xl font-outfit text-blue-800 mb-6 flex items-center gap-2">
         🏆 Leaderboard (Top 5)
       </h3>
 
@@ -116,15 +116,15 @@ export default function Leaderboard({
               }`}
             >
               <div className="flex items-center justify-between mb-2">
-                <span className="text-2xl font-bold text-blue-700">
+                <span className="text-2xl font-outfit text-blue-700">
                   {rankBadge(rank)}
                 </span>
-                <span className="px-3 py-1 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-semibold">
+                <span className="px-3 py-1 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-outfit">
                   {u.referrals} invites
                 </span>
               </div>
 
-              <div className="text-lg font-semibold text-blue-800 truncate">
+              <div className="text-lg font-outfit text-blue-800 truncate">
                 {formatUsername(u)}
               </div>
 
@@ -140,7 +140,7 @@ export default function Leaderboard({
 
       {/* 🔍 Search Section */}
       <div className="border-t border-blue-100 pt-6 mt-4">
-        <h4 className="text-lg font-bold text-blue-700 mb-3">
+        <h4 className="text-lg font-outfit text-blue-700 mb-3">
           Find by Twitter, Discord, Wallet or Rank
         </h4>
         <div className="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center">
@@ -153,7 +153,7 @@ export default function Leaderboard({
           <div className="flex gap-2">
             <button
               onClick={handleSearch}
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:scale-105 transition w-full sm:w-auto"
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg font-outfit hover:scale-105 transition w-full sm:w-auto"
             >
               🔍
             </button>
@@ -172,7 +172,7 @@ export default function Leaderboard({
         {searchResults && (
           <div className="mt-4 text-sm text-blue-700">
             Showing {searchResults.length} result(s) for{" "}
-            <span className="font-semibold">"{query}"</span>
+            <span className="font-outfit">"{query}"</span>
           </div>
         )}
       </div>
