@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Panel from "./components/Panel";
+import Footer from "./components/Footer";
+
 
 const FONT_CLASSES = [
   "font-comic",
@@ -288,6 +290,19 @@ export default function HomePage() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* ⚡ Footer Glow Accent */}
+<div
+  className="absolute bottom-0 w-full h-[150px] blur-3xl -z-10"
+  style={{
+    background:
+      "radial-gradient(circle at bottom center, rgba(59,130,246,0.6), transparent 70%)",
+  }}
+/>
+
+{/* Footer Component */}
+<Footer />
+
     </main>
   );
 }
