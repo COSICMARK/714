@@ -6,11 +6,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        caveat: ["Caveat", "cursive"],
-        indie: ["Indie Flower", "cursive"],
-        patrick: ["Patrick Hand", "cursive"],
-        gloria: ["Gloria Hallelujah", "cursive"],
-        shadows: ["Shadows Into Light", "cursive"],
+        inter: ["Inter", "sans-serif"],
+        outfit: ["Outfit", "sans-serif"],
+        nunito: ["Nunito", "sans-serif"],
       },
     },
   },
