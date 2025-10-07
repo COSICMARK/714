@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
-/* ✅ Google Handwriting Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Indie+Flower&family=Patrick+Hand&family=Gloria+Hallelujah&family=Shadows+Into+Light&display=swap');
+/* ✅ Clean + readable Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;800&display=swap');
 
 /* ✅ Base theme variables */
 :root {
@@ -23,13 +23,22 @@
   }
 }
 
-/* ✅ Default body (NO notebook style anymore) */
+/* ✅ Default body text — clean and readable */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Patrick Hand', cursive;
+  font-family: 'Inter', sans-serif;
   transition: background 0.3s, color 0.3s;
-  line-height: 1.8;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* ✅ Modern headings with a tech-futuristic touch */
+h1, h2, h3, .title {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 /* ✅ Notebook paper effect (ONLY when applied with .notebook class) */
