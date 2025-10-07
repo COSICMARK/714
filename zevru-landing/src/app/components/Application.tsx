@@ -119,8 +119,9 @@ const handleSubmit = async (e: React.FormEvent) => {
 
   // If not authorized → passcode screen
   if (!authorized) {
-    return (
-      <div className="flex flex-col items-center space-y-4 p-6 bg-white rounded-xl shadow-lg max-w-md mx-auto text-center">
+      return (
+  <div className="font-sans font-normal text-blue-900 w-full max-w-lg mx-auto bg-white shadow-xl rounded-2xl p-6 sm:p-8 space-y-6">
+
         <h2 className="text-2xl font-extrabold italic text-blue-700 mb-4 tracking-wide">
           🔑 Enter Passcode
         </h2>
@@ -206,7 +207,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   // Otherwise → Show application form
   return (
     <div className="w-full max-w-lg mx-auto bg-white shadow-xl rounded-2xl p-6 sm:p-8 space-y-6">
-      <h2 className="text-3xl font-extrabold italic text-blue-800 drop-shadow-md text-center">
+       <h2 className="text-3xl font-semibold italic text-blue-800 drop-shadow-md text-center">
         📝 Application Form
       </h2>
 
