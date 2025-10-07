@@ -290,20 +290,17 @@ export default function HomePage() {
           </motion.div>
         )}
       </AnimatePresence>
+{/* ⚡ Footer Glow Accent */}
+<div
+  className="fixed bottom-0 left-0 w-full h-[80px] blur-3xl -z-10"
+  style={{
+    background:
+      "radial-gradient(circle at bottom center, rgba(59,130,246,0.6), transparent 70%)",
+  }}
+/>
 
-            {/* ⚡ Footer Glow Accent */}
-      <div
-        className="fixed bottom-0 left-0 w-full h-[80px] blur-3xl -z-10"
-        style={{
-          background:
-            "radial-gradient(circle at bottom center, rgba(59,130,246,0.6), transparent 70%)",
-        }}
-      />
-
-      {/* Footer Component */}
-      <div className="mt-auto w-full">
-        <Footer />
-      </div>
+{/* Footer Component */}
+<Footer />
 
     </main>
   );
