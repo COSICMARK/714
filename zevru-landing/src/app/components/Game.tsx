@@ -238,7 +238,7 @@ export default function ZevruQuickTap() {
           className="flex items-center justify-between mb-8"
         >
           <div>
-            <h1 className="text-4xl md:text-5xl font-outfit bg-gradient-to-r from-blue-300 to-blue-500 bg-clip-text text-transparent drop-shadow-lg">
+            <h1 className="text-4xl md:text-5xl font-sans bg-gradient-to-r from-blue-300 to-blue-500 bg-clip-text text-transparent drop-shadow-lg">
               Zevru — Tap to Charge ⚡
             </h1>
             <p className="text-slate-300 text-sm mt-1">White & Blue hyper-real arcade interface</p>
@@ -249,7 +249,7 @@ export default function ZevruQuickTap() {
               <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md px-4 py-2 rounded-xl border border-blue-500/30 shadow">
                 <div className="text-right">
                   <div className="text-xs text-slate-300">Connected</div>
-                  <div className="font-outfit text-sm truncate max-w-[140px]">{wallet}</div>
+                  <div className="font-sans text-sm truncate max-w-[140px]">{wallet}</div>
                 </div>
                 <button
                   onClick={handleLogout}
@@ -289,15 +289,15 @@ export default function ZevruQuickTap() {
             <div className="flex items-center gap-4">
               <div className="rounded-xl bg-gradient-to-br from-blue-500/20 to-indigo-500/20 px-4 py-3 shadow-inner border border-blue-400/30">
                 <div className="text-xs text-slate-300">Energy</div>
-                <div className="text-3xl font-outfit text-blue-300 animate-pulse">{energyLabel}</div>
+                <div className="text-3xl font-sans text-blue-300 animate-pulse">{energyLabel}</div>
               </div>
               <div className="rounded-xl bg-gradient-to-br from-blue-500/20 to-indigo-500/20 px-4 py-3 border border-blue-400/30">
                 <div className="text-xs text-slate-300">Stage</div>
-                <div className="text-lg font-outfit">{stage + 1} / {evolutionStages.length}</div>
+                <div className="text-lg font-sans">{stage + 1} / {evolutionStages.length}</div>
               </div>
               <div className="rounded-xl bg-gradient-to-br from-blue-500/20 to-indigo-500/20 px-4 py-3 border border-blue-400/30">
                 <div className="text-xs text-slate-300">Taps (stage)</div>
-                <div className="text-lg font-outfit">{tapsThisStage}</div>
+                <div className="text-lg font-sans">{tapsThisStage}</div>
               </div>
             </div>
             <div className="text-sm text-slate-400">Auto-sync every {(FLUSH_INTERVAL_MS/1000).toFixed(1)}s</div>
@@ -353,7 +353,7 @@ export default function ZevruQuickTap() {
                 transition={{ duration: 0.8 }}
                 className="pointer-events-none fixed z-50"
               >
-                <div className="px-4 py-1 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-outfit text-sm shadow-lg">
+                <div className="px-4 py-1 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-sans text-sm shadow-lg">
                   +{ENERGY_PER_TAP}
                 </div>
               </motion.div>
@@ -388,7 +388,7 @@ export default function ZevruQuickTap() {
             <div className="flex items-center gap-3">
               <button
                 onClick={() => flushPending()}
-                className="px-5 py-2 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-outfit shadow-lg hover:scale-105 active:scale-95 transition"
+                className="px-5 py-2 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-sans shadow-lg hover:scale-105 active:scale-95 transition"
               >
                 Sync Now
               </button>

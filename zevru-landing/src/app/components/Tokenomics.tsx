@@ -1,22 +1,22 @@
 export default function Tokenomics() {
   return (
     <div className="notebook space-y-8">
-      <h2 className="text-4xl text-pink-600 font-outfit">
+      <h2 className="text-4xl text-pink-600 font-sans">
         📜 Zevru Tokenomics
       </h2>
 
-      <p className="text-xl font-outfit text-gray-800">
+      <p className="text-xl font-sans text-gray-800">
         Zevru is more than just a coin on Base.  
         It’s like old-school energy crashing into the modern blockchain world –  
         wild, fun, and made for people who vibe with culture and community.
       </p>
 
-      <p className="text-xl font-outfit text-gray-800">
+      <p className="text-xl font-sans text-gray-800">
         The tokenomics are super simple, totally clear,  
         and built to grow a strong crew of holders.
       </p>
 
-      <ul className="list-none space-y-3 pl-2 font-outfit text-lg text-gray-900">
+      <ul className="list-none space-y-3 pl-2 font-sans text-lg text-gray-900">
         <li>
           ➤ Community – 70%
           <ul className="ml-6 list-none space-y-1">
@@ -29,11 +29,11 @@ export default function Tokenomics() {
         <li>➤ Liquidity – 20%</li>
       </ul>
 
-      <p className="text-lg font-outfit text-gray-700">
+      <p className="text-lg font-sans text-gray-700">
         Total supply: TBA ✍️
       </p>
 
-      <p className="text-xl font-outfit text-gray-800">
+      <p className="text-xl font-sans text-gray-800">
         Balance is key, the community holds most of it,  
         the team just a little, and liquidity is locked tight  
         so trading stays chill.  

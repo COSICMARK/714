@@ -1,18 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "@rainbow-me/rainbowkit/styles.css";   // ✅ RainbowKit styles
+import "@rainbow-me/rainbowkit/styles.css";
 import "./globals.css";
 import { Providers } from "@/app/providers/wagmiClient";
-
-const geistSans = Geist({
-  variable: "--font-outfit",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-outfit",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "ZEVRU",
@@ -32,12 +21,8 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.png" type="image/png" />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Providers>
-          {children}
-        </Providers>
+      <body className="antialiased font-sans">
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

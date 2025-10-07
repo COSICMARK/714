@@ -7,11 +7,11 @@ import Footer from "./components/Footer";
 
 
 const FONT_CLASSES = [
-  "font-outfit",
-  "font-outfit",
-  "font-outfit",
-  "font-outfit",
-  "font-outfit",
+  "font-sans",
+  "font-sans",
+  "font-sans",
+  "font-sans",
+  "font-sans",
 ];
 
 export default function HomePage() {
@@ -169,7 +169,7 @@ export default function HomePage() {
         initial={{ scale: 0.85, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
-        className="relative text-5xl sm:text-6xl lg:text-7xl font-outfit tracking-tight mb-2"
+        className="relative text-5xl sm:text-6xl lg:text-7xl font-sans tracking-tight mb-2"
         style={{
           color: "white",
           textShadow:
@@ -184,7 +184,7 @@ export default function HomePage() {
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.12, duration: 0.8 }}
-        className="text-lg sm:text-2xl font-outfit mb-6"
+        className="text-lg sm:text-2xl font-sans mb-6"
         style={{
           color: "rgba(200, 245, 255, 0.94)",
           textShadow: "0 6px 18px rgba(2,6,23,0.45)",
@@ -214,7 +214,7 @@ export default function HomePage() {
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.96 }}
             onClick={startVibes}
-            className="px-8 py-3 rounded-2xl bg-gradient-to-r from-cyan-300 to-indigo-600 text-black font-outfit shadow-[0_16px_40px_rgba(59,130,246,0.22)] border-2 border-white/20"
+            className="px-8 py-3 rounded-2xl bg-gradient-to-r from-cyan-300 to-indigo-600 text-black font-sans shadow-[0_16px_40px_rgba(59,130,246,0.22)] border-2 border-white/20"
           >
             🔊 Start Vibes
           </motion.button>
@@ -224,7 +224,7 @@ export default function HomePage() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleOpenPortal}
-              className="px-6 py-2 rounded-xl bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-outfit shadow-lg border border-white/10"
+              className="px-6 py-2 rounded-xl bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-sans shadow-lg border border-white/10"
             >
               🚪 Open Portal
             </motion.button>
@@ -266,11 +266,11 @@ export default function HomePage() {
         }}
       >
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-400 to-indigo-500 flex items-center justify-center text-xs font-outfit shadow-sm">
+          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-400 to-indigo-500 flex items-center justify-center text-xs font-sans shadow-sm">
             🎵
           </div>
           <div>
-            <div className="font-outfit text-[13px]"></div>
+            <div className="font-sans text-[13px]"></div>
             <div className="text-xs text-white/80">Ready to moon?</div>
           </div>
         </div>

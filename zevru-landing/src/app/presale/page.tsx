@@ -202,7 +202,7 @@ export default function PresalePage() {
         animate={{ opacity: 1, y: 0 }}
         className="max-w-5xl w-full bg-white border border-[#004c99] rounded-2xl p-8 shadow-xl"
       >
-        <h1 className="text-3xl sm:text-4xl font-outfit text-center mb-6 text-[#003366]">
+        <h1 className="text-3xl sm:text-4xl font-sans text-center mb-6 text-[#003366]">
           🐱 Zevru Presale
         </h1>
 
@@ -218,36 +218,36 @@ export default function PresalePage() {
               )}
             </div>
 
-            <h2 className="text-lg font-outfit text-[#0066cc]">Presale Details</h2>
+            <h2 className="text-lg font-sans text-[#0066cc]">Presale Details</h2>
             <div className="grid grid-cols-2 gap-2 text-sm">
               <div>
                 <span className="text-gray-600">Total Token Supply</span>
-                <div className="font-outfit text-[#003366]">{tokenSupplyDisplay}</div>
+                <div className="font-sans text-[#003366]">{tokenSupplyDisplay}</div>
               </div>
               <div>
                 <span className="text-gray-600">Presale Supply</span>
-                <div className="font-outfit text-[#003366]">{presaleCapDisplay}</div>
+                <div className="font-sans text-[#003366]">{presaleCapDisplay}</div>
               </div>
               <div>
                 <span className="text-gray-600">Valuation (FDV)</span>
-                <div className="font-outfit text-[#003366]">$2,000,000</div>
+                <div className="font-sans text-[#003366]">$2,000,000</div>
               </div>
               <div>
                 <span className="text-gray-600">Price per Token</span>
-                <div className="font-outfit text-[#003366]">$0.001</div>
+                <div className="font-sans text-[#003366]">$0.001</div>
               </div>
               <div>
                 <span className="text-gray-600">Pair</span>
-                <div className="font-outfit text-[#003366]">USDT / USDC (Base)</div>
+                <div className="font-sans text-[#003366]">USDT / USDC (Base)</div>
               </div>
               <div>
                 <span className="text-gray-600">Tokens Sold</span>
-                <div className="font-outfit text-[#003366]">{tokensSoldDisplay}</div>
+                <div className="font-sans text-[#003366]">{tokensSoldDisplay}</div>
               </div>
             </div>
 
             <div className="mt-6">
-              <div className="flex justify-between text-sm font-outfit mb-1 text-[#003366]">
+              <div className="flex justify-between text-sm font-sans mb-1 text-[#003366]">
                 <span>Min $200k</span>
                 <span>${usdRaised.toLocaleString()} Raised</span>
                 <span>Max $400k</span>
@@ -274,7 +274,7 @@ export default function PresalePage() {
           {/* RIGHT SIDE BUY BOX */}
           <div className="p-5 bg-[#f8fbff] rounded-xl border border-[#0066cc]">
             <div ref={termsRef} className="mb-4 bg-white p-3 rounded text-sm border">
-              <h3 className="font-outfit mb-2 text-[#0066cc]">Terms & Conditions</h3>
+              <h3 className="font-sans mb-2 text-[#0066cc]">Terms & Conditions</h3>
               <ul className="list-disc pl-5 space-y-1 text-gray-700">
                 <li>No refunds after purchase.</li>
                 <li>Tokens distributed after purchase, but paused until listing.</li>
@@ -317,7 +317,7 @@ export default function PresalePage() {
                     className="w-full p-3 rounded border bg-white text-[#003366] text-sm"
                   />
                   <p className="text-xs text-gray-600 mt-2">
-                    Receive: <span className="font-outfit">{receiveString} Zevru</span>
+                    Receive: <span className="font-sans">{receiveString} Zevru</span>
                   </p>
                 </div>
 
@@ -345,7 +345,7 @@ export default function PresalePage() {
                 <button
                   onClick={handleBuy}
                   disabled={!agreed || loading}
-                  className={`w-full py-3 font-outfit rounded ${!agreed || loading ? "bg-gray-300 text-gray-500" : "bg-[#0066cc] text-white hover:opacity-90"}`}
+                  className={`w-full py-3 font-sans rounded ${!agreed || loading ? "bg-gray-300 text-gray-500" : "bg-[#0066cc] text-white hover:opacity-90"}`}
                 >
                   {loading ? "Processing..." : "Approve & Buy"}
                 </button>
@@ -354,7 +354,7 @@ export default function PresalePage() {
 
                 {txHash && (
                   <div className="mt-4 text-sm bg-white p-3 rounded border">
-                    <p className="font-outfit text-[#00aa66]">Success 🎉</p>
+                    <p className="font-sans text-[#00aa66]">Success 🎉</p>
                     <p>
                       View transaction:{" "}
                       <a
@@ -375,7 +375,7 @@ export default function PresalePage() {
 
                 {showCongrats && (
                   <div className="mt-6 p-4 bg-[#0066cc] text-white rounded-lg text-center">
-                    <h3 className="text-lg font-outfit">🎉 Congratulations!</h3>
+                    <h3 className="text-lg font-sans">🎉 Congratulations!</h3>
                     <p className="mt-2">Your purchase was successful. Tokens should be in your wallet shortly.</p>
                   </div>
                 )}
